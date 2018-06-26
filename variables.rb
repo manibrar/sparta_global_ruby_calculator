@@ -83,7 +83,7 @@
     weight = gets.to_f
     hi_weight = weight / height
     bmi = hi_weight/ height
-    if bmi < 17
+    if bmi < 18.6
       puts "your bmi is #{bmi} which is considered underweight"
     elsif bmi < 25 && bmi > 17
       puts "your bmi is #{bmi} which is considered a healthy weight"
