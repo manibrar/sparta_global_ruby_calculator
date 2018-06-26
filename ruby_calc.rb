@@ -68,7 +68,6 @@
   def advanced_calculator
     puts "Hello would you like to [power] or [sqrt]?"
     calc_type = gets.chomp
-
     if calc_type == 'power'
       advanced_power_function
     elsif calc_type == 'sqrt'
@@ -96,6 +95,7 @@
       hi_weight = weight / height
       bmi = hi_weight/ height
     end
+    
     if bmi < 18.6
       puts "your bmi is #{bmi} which is considered underweight"
     elsif bmi < 25 && bmi > 17
