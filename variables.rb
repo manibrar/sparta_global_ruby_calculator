@@ -76,20 +76,42 @@
   end
 
   def bmi_calc
-    puts "Hello to calculate you're bmi please tell me you're height in m?"
+    puts "Hello to calculate your bmi please tell me your height in m?"
     height = gets.to_f
-    puts "Hello to calculate you're bmi please tell me you're weight in kg?"
+    puts "Hello to calculate your bmi please tell me your weight in kg?"
     weight = gets.to_f
     hi_weight = weight / height
     bmi = hi_weight/ height
     if bmi < 17
-      puts "You're bmi is #{bmi} which is considered underweight"
+      puts "your bmi is #{bmi} which is considered underweight"
     elsif bmi < 25 && bmi > 17
-      puts "You're bmi is #{bmi} which is considered a healthy weight"
+      puts "your bmi is #{bmi} which is considered a healthy weight"
     elsif bmi > 25
-      puts "You're bmi is #{bmi} which is considered overweight"
+      puts "your bmi is #{bmi} which is considered overweight"
     end
   end
+
+  def trip_calc
+    puts "Hello to calculate your trip please tell me your distance in miles?"
+    distance = gets.to_f
+    puts "Hello to calculate your trip please tell me your miles per gallon?"
+    mpg = gets.to_f
+    puts "Hello to calculate your trip please tell me your £ per gallon?"
+    cpg = gets.to_f
+    puts "Hello to calculate your trip please tell me your speed?"
+    speed = gets.to_f
+    x_dist = distance/speed
+    y_price = (distance/mpg)*cpg
+
+    for i in (60..speed)
+      if mpg != 0
+      mpg += -(2)
+      end
+    end
+
+    puts "Your fuel consumption at #{speed}mph will be #{mpg}miles per gallon"
+    puts "Your trip will take #{x_dist} hours and will cost £#{y_price}"
+    end
 
   puts "Hello which calculator would you like to use? [basic] [advanced] [bmi] or [trip]?"
   calc_type = gets.chomp
@@ -100,4 +122,6 @@
       advanced_calculator
   elsif calc_type == 'bmi'
       bmi_calc
+    elsif calc_type == 'trip'
+        trip_calc
   end
