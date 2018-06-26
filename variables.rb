@@ -116,15 +116,19 @@
     speed = gets.to_f
     x_dist = distance/speed
     y_price = (distance/mpg)*cpg
-
-    for i in (60...speed)
-      if mpg != 0
-      mpg += -(2)
+    if (speed || cpg || distance || mpg) == " "
+      puts "Error incorrect entry.. Please try again"
+      greeting
+    else
+      for i in (60...speed)
+        if mpg != 0
+          mpg += -(2)
+        end
       end
-    end
     puts "Your fuel consumption at #{speed}mph will be #{mpg}mpg"
     puts "Your trip will take #{x_dist} hours and will cost £#{y_price}"
   end
+end
 
 def greeting
   puts "Hello which calculator would you like to use? [basic] [advanced] [bmi] or [trip]?"
