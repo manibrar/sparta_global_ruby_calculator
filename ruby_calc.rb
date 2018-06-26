@@ -126,7 +126,7 @@
         end
       end
     puts "Your fuel consumption at #{speed.to_i} mph will be #{mpg.to_i} mpg"
-    puts "Your trip will take #{x_dist.to_i} hours and will cost £#{y_price}"
+    puts "Your trip will take #{x_dist.to_f} hours and will cost £#{y_price}"
   end
 end
 
