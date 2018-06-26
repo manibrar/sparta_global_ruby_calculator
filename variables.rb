@@ -19,20 +19,20 @@
 
   def basic_multiply_function
     puts "What is the first number you would like to calculate?"
-    response1 = gets.to_i
+    response1 = gets.to_f
     puts  "What is the second number you would like to calculate?"
-    response2 = gets.to_i
+    response2 = gets.to_f
     answer = response1 * response2
     puts "Your answer is #{answer}"
   end
 
   def basic_divide_function
     puts "What is the first number you would like to calculate?"
-    response1 = gets.to_i
+    response1 = gets.to_f
     puts  "What is the second number you would like to calculate?"
-    response2 = gets.to_i
+    response2 = gets.to_f
     answer = response1 / response2
-    puts "Your answer is #{answer}"
+    puts "Your answer is #{answer.abs2}"
   end
 
   def advanced_power_function
@@ -77,12 +77,25 @@
   end
 
   def bmi_calc
-    puts "Hello to calculate your bmi please tell me your height in m?"
-    height = gets.to_f
-    puts "Hello to calculate your bmi please tell me your weight in kg?"
-    weight = gets.to_f
-    hi_weight = weight / height
-    bmi = hi_weight/ height
+    puts "Would you like [imperial] or [metric]?"
+    bmi_choice = gets.chomp
+    if bmi_choice == 'imperial'
+      puts "Hello to calculate your bmi please tell me your height in feet and inches?"
+      height = gets.to_f
+      imperial_height = height * 0.3048
+      puts "Hello to calculate your bmi please tell me your weight in lbs?"
+      weight = gets.to_f
+      imperial_weight = weight * 0.453592
+      hi_weight = imperial_weight / imperial_height
+      bmi = hi_weight/ imperial_height
+    elsif bmi_choice == 'metric'
+      puts "Hello to calculate your bmi please tell me your height in m?"
+      height = gets.to_f
+      puts "Hello to calculate your bmi please tell me your weight in kg?"
+      weight = gets.to_f
+      hi_weight = weight / height
+      bmi = hi_weight/ height
+    end
     if bmi < 18.6
       puts "your bmi is #{bmi} which is considered underweight"
     elsif bmi < 25 && bmi > 17
@@ -109,7 +122,7 @@
       mpg += -(2)
       end
     end
-    puts "Your fuel consumption at #{speed}mph will be #{mpg}miles per gallon"
+    puts "Your fuel consumption at #{speed}mph will be #{mpg}mpg"
     puts "Your trip will take #{x_dist} hours and will cost £#{y_price}"
   end
 
