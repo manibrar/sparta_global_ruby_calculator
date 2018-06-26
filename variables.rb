@@ -1,3 +1,4 @@
+
   def basic_add_function
     puts "What is the first number you would like to calculate?"
     response1 = gets.to_i
@@ -108,11 +109,11 @@
       mpg += -(2)
       end
     end
-
     puts "Your fuel consumption at #{speed}mph will be #{mpg}miles per gallon"
     puts "Your trip will take #{x_dist} hours and will cost £#{y_price}"
-    end
+  end
 
+def greeting
   puts "Hello which calculator would you like to use? [basic] [advanced] [bmi] or [trip]?"
   calc_type = gets.chomp
 
@@ -122,6 +123,16 @@
       advanced_calculator
   elsif calc_type == 'bmi'
       bmi_calc
-    elsif calc_type == 'trip'
+  elsif calc_type == 'trip'
         trip_calc
+  else
+    puts  "Error please try again"
+    greeting
   end
+end
+
+begin
+greeting
+puts "Would you like another calculation [y] or exit [x]"
+user = gets.chomp
+end until user == 'x'
