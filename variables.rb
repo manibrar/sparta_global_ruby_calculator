@@ -1,0 +1,90 @@
+  def basic_add_function
+    puts "What is the first number you would like to calculate?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    basic_total = response1 + response2
+    puts "Your answer is #{basic_total}"
+  end
+
+  def basic_subtract_function
+    puts "What is the first number you would like to calculate?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    answer = response1 - response2
+    puts "Your answer is #{answer}"
+  end
+
+  def basic_multiply_function
+    puts "What is the first number you would like to calculate?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    answer = response1 * response2
+    puts "Your answer is #{answer}"
+  end
+
+  def basic_divide_function
+    puts "What is the first number you would like to calculate?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    answer = response1 / response2
+    puts "Your answer is #{answer}"
+  end
+
+  def advanced_power_function
+    puts "What is the first number you would like to calculate?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    answer = response1 ** response2
+    puts "Your answer is #{answer}"
+  end
+
+  def advanced_sqrt_function
+    puts "What is the number you would like the square root of?"
+    response1 = gets.to_i
+    puts  "What is the second number you would like to calculate?"
+    response2 = gets.to_i
+    answer = response1 ** response2
+    puts "Your answer is #{answer}"
+  end
+
+  def basic_calculator
+    puts "Hello would you like to [add], [subtract], [multiply] or [divide]?"
+    calc_type = gets.chomp
+
+    if calc_type == 'add'
+      basic_add_function
+    elsif calc_type == 'subtract'
+      basic_subtract_function
+    elsif calc_type == 'multiply'
+      basic_multiply_function
+    elsif calc_type == 'divide'
+      basic_divide_function
+    end
+  end
+
+  def advanced_calculator
+    puts "Hello would you like to [power] or [sqrt]?"
+    calc_type = gets.chomp
+
+    if calc_type == 'power'
+      advanced_power_function
+    elsif calc_type == 'sqrt'
+      advanced_sqrt_function
+    end
+  end
+
+
+
+  puts "Hello which calculator would you like to use? [basic] [advanced] [bmi] or [trip]?"
+  calc_type = gets.chomp
+
+  if calc_type == 'basic'
+      basic_calculator
+  elsif calc_type = 'advanced'
+      advanced_calculator
+  end
