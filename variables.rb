@@ -104,7 +104,7 @@
     x_dist = distance/speed
     y_price = (distance/mpg)*cpg
 
-    for i in (60..speed)
+    for i in (60...speed)
       if mpg != 0
       mpg += -(2)
       end
