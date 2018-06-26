@@ -108,11 +108,11 @@
   def trip_calc
     puts "Hello to calculate your trip please tell me your distance in miles?"
     distance = gets.to_f
-    puts "Hello to calculate your trip please tell me your miles per gallon?"
+    puts "Hello to calculate your trip please tell me your vehicles mpg?"
     mpg = gets.to_f
-    puts "Hello to calculate your trip please tell me your £ per gallon?"
+    puts "Hello to calculate your trip please tell me your vehicles £ per gallon?"
     cpg = gets.to_f
-    puts "Hello to calculate your trip please tell me your speed?"
+    puts "Hello to calculate your trip please tell me your average speed?"
     speed = gets.to_f
     x_dist = distance/speed
     y_price = (distance/mpg)*cpg
@@ -125,8 +125,8 @@
           mpg += -(2)
         end
       end
-    puts "Your fuel consumption at #{speed}mph will be #{mpg}mpg"
-    puts "Your trip will take #{x_dist} hours and will cost £#{y_price}"
+    puts "Your fuel consumption at #{speed.to_i} mph will be #{mpg.to_i} mpg"
+    puts "Your trip will take #{x_dist.to_i} hours and will cost £#{y_price}"
   end
 end
 
